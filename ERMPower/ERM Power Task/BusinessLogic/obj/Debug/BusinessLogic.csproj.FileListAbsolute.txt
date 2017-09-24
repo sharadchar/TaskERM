@@ -1,0 +1,10 @@
+D:\Projects\ERMPower\ERM Power Task\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\Projects\ERMPower\ERM Power Task\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\Projects\ERMPower\ERM Power Task\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Projects\ERMPower\ERM Power Task\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\Projects\ERMPower\ERM Power Task\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\Projects\TaskERM\ERMPower\ERM Power Task\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\Projects\TaskERM\ERMPower\ERM Power Task\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\Projects\TaskERM\ERMPower\ERM Power Task\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Projects\TaskERM\ERMPower\ERM Power Task\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\Projects\TaskERM\ERMPower\ERM Power Task\BusinessLogic\obj\Debug\BusinessLogic.pdb
