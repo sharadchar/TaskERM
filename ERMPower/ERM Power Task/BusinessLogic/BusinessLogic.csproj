@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileLoader.cs" />
+    <Compile Include="Model\IDisplayAbnormality.cs" />
     <Compile Include="Model\CollectionSummary.cs" />
     <Compile Include="Model\FileData.cs" />
     <Compile Include="Model\File_Info.cs" />

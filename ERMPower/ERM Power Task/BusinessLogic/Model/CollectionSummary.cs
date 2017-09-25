@@ -12,5 +12,6 @@ namespace BusinessLogic.Model
         public decimal Percentage { get; set; }
         public IEnumerable<T> LowerValues { get; set; }
         public IEnumerable<T> HigherValues { get; set; }
+        public IEnumerable<T> AbnormalValues { get; set; }
     }
 }

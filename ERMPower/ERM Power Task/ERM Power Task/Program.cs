@@ -68,12 +68,15 @@ namespace ERM_Power_Task
         /// <param name="TOUFileInfo">List of TOU file information</param>
         private static void DisplayInformation(List<File_Info<LP_data>> LPFileInfo, List<File_Info<TOU_data>> TOUFileInfo)
         {
+            System.Console.WriteLine("Median Calculated Successfully");
             if (LPFileInfo.Count > 0)
             {
                 System.Console.WriteLine("There are " + LPFileInfo.Count.ToString() + " LP type files");
                 foreach (var item in LPFileInfo)
                 {
                     System.Console.WriteLine("File " + item.FileName + ": has median = " + item.summary.Median);
+                    //This could be formated and displayed with the date and file name and median but list could be big. Hence not displaying 
+                    System.Console.WriteLine(item.summary.AbnormalValues.ToList().Count.ToString() + " Abnormal values found" );
                 }
                 System.Console.WriteLine("-------------------------------------------------------------------------------");
             }
@@ -89,6 +92,8 @@ namespace ERM_Power_Task
                 foreach (var item in TOUFileInfo)
                 {
                     System.Console.WriteLine("File " + item.FileName + ": has median = " + item.summary.Median);
+                    //This could be formated and displayed with the date and file name and median but list could be big. Hence not displaying 
+                    System.Console.WriteLine(item.summary.AbnormalValues.ToList().Count.ToString() + " Abnormal values found");
                 }
                 System.Console.WriteLine("-------------------------------------------------------------------------------");
             }
