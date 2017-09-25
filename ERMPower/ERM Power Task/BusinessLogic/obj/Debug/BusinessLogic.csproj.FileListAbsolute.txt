@@ -8,3 +8,7 @@ D:\Projects\TaskERM\ERMPower\ERM Power Task\BusinessLogic\bin\Debug\BusinessLogi
 D:\Projects\TaskERM\ERMPower\ERM Power Task\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
 D:\Projects\TaskERM\ERMPower\ERM Power Task\BusinessLogic\obj\Debug\BusinessLogic.dll
 D:\Projects\TaskERM\ERMPower\ERM Power Task\BusinessLogic\obj\Debug\BusinessLogic.pdb
+E:\Sharad\Test Project RND\TaskERM\ERMPower\ERM Power Task\BusinessLogic\bin\Debug\BusinessLogic.dll
+E:\Sharad\Test Project RND\TaskERM\ERMPower\ERM Power Task\BusinessLogic\bin\Debug\BusinessLogic.pdb
+E:\Sharad\Test Project RND\TaskERM\ERMPower\ERM Power Task\BusinessLogic\obj\Debug\BusinessLogic.dll
+E:\Sharad\Test Project RND\TaskERM\ERMPower\ERM Power Task\BusinessLogic\obj\Debug\BusinessLogic.pdb

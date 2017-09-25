@@ -19,44 +19,52 @@ namespace BusinessLogic
 
             try
             {
-
                 var fileContent = await Task.WhenAll(ReadFiles(filePaths));
                 
                 files = fileContent.ToList();
 
                 return files;
-
             }
-            catch (Exception exception)
+            catch (Exception ex)
             {
-
+                throw ex;
             }
             return null;
         }
 
+        /// <summary>
+        /// This method reads the files as string
+        /// </summary>
+        /// <param name="filePaths"></param>
+        /// <returns></returns>
         private IEnumerable<Task<File_Info>> ReadFiles(string[] filePaths)
         {
-            return filePaths.Select(async filePath =>
+            try
             {
-                using (var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-                {
-                    using (var streamReader = new StreamReader(fileStream))
-                    {
-                        File_Info tempobj = new File_Info();
-                        if (filePath.Contains("\\LP"))
-                            tempobj.Type = "LP";
-                        else
-                            tempobj.Type = "TOU";
-                        var content = await streamReader.ReadToEndAsync();
+                return filePaths.Select(async filePath =>
+                            {
+                                using (var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                                {
+                                    using (var streamReader = new StreamReader(fileStream))
+                                    {
+                                        File_Info tempobj = new File_Info();
+                                        if (filePath.Contains("\\LP"))
+                                            tempobj.Type = "LP";
+                                        else
+                                            tempobj.Type = "TOU";
+                                        var content = await streamReader.ReadToEndAsync();
 
-                        await GetdataObjects(content.Split(new[] { Environment.NewLine }, StringSplitOptions.None).ToList(), tempobj);
+                                        await GetdataObjects(content.Split(new[] { Environment.NewLine }, StringSplitOptions.None).ToList(), tempobj);
 
-                        return tempobj;
-                    }
-                }
-            });
-
-
+                                        return tempobj;
+                                    }
+                                }
+                            });
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
 
         /// <summary>
@@ -67,14 +75,21 @@ namespace BusinessLogic
         /// <returns></returns>
         private async Task GetdataObjects(List<string> content, File_Info tempobj)
         {
-            content.RemoveAll(x => string.IsNullOrWhiteSpace(x));
-            if (tempobj.Type == "LP")
+            try
             {
-                tempobj.FileDataLP = await GetLPData(content);
+                content.RemoveAll(x => string.IsNullOrWhiteSpace(x));
+                if (tempobj.Type == "LP")
+                {
+                    tempobj.FileDataLP = await GetLPData(content);
+                }
+                else
+                {
+                    tempobj.FileDataTOU = await GetTOUData(content);
+                }
             }
-            else
+            catch(Exception ex)
             {
-                tempobj.FileDataTOU = await GetTOUData(content);
+                throw ex;
             }
         }
 
@@ -112,7 +127,7 @@ namespace BusinessLogic
             }
             catch(Exception ex)
             {
-
+                throw ex;
             }
             return tempList;
         }
@@ -157,7 +172,7 @@ namespace BusinessLogic
             }
             catch(Exception ex)
             {
-
+                throw ex;
             }
             return tempList;
         }
@@ -169,11 +184,18 @@ namespace BusinessLogic
         /// <returns>retuns the array od strings</returns>
         private async Task<string[]> splitItems(string row)
         {
-            var splitFields = row.Split(',');
-            if (splitFields[0] == "MeterPoint Code") //Asuming 0,0 cell of csv is MeterPointCode
-                return null;
-            else
-                return splitFields;
+            try
+            {
+                var splitFields = row.Split(',');
+                if (splitFields[0] == "MeterPoint Code") //Asuming 0,0 cell of csv is MeterPointCode
+                    return null;
+                else
+                    return splitFields;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
 
     }
