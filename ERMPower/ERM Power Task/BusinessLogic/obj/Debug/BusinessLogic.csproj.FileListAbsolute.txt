@@ -12,3 +12,4 @@ E:\Sharad\Test Project RND\TaskERM\ERMPower\ERM Power Task\BusinessLogic\bin\Deb
 E:\Sharad\Test Project RND\TaskERM\ERMPower\ERM Power Task\BusinessLogic\bin\Debug\BusinessLogic.pdb
 E:\Sharad\Test Project RND\TaskERM\ERMPower\ERM Power Task\BusinessLogic\obj\Debug\BusinessLogic.dll
 E:\Sharad\Test Project RND\TaskERM\ERMPower\ERM Power Task\BusinessLogic\obj\Debug\BusinessLogic.pdb
+E:\Sharad\Test Project RND\TaskERM\ERMPower\ERM Power Task\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache

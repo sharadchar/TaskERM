@@ -43,8 +43,10 @@
   <ItemGroup>
     <Compile Include="FileLoader.cs" />
     <Compile Include="Model\CollectionSummary.cs" />
+    <Compile Include="Model\FileData.cs" />
     <Compile Include="Model\File_Info.cs" />
     <Compile Include="Model\LP_data.cs" />
+    <Compile Include="ObjectCreater.cs" />
     <Compile Include="Summary.cs" />
     <Compile Include="Model\TOU_data.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic.Model
 {
-    public class TOU_data
+    public class TOU_data 
     {
         public int MeterPointCode { get; set; }
         public int SerialNumber { get; set; }
